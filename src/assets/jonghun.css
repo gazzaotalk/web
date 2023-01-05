@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#main{
+    padding:1rem;
+    padding-bottom: 60px;
+}
+
+.room div p, .me div p, .friend div p{
+    margin:0px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.friend, .room, .me{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.me{
+    padding-bottom: 1rem;
+}
+
+.me div p{
+    padding-left: 1rem;
+}
+
+.radius_img{
+    border-radius: 40%;
+}
+
+header .row{
+    width:100%;
+    display:flex;
+    align-items:center;
+}
