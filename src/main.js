@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './pages/main.vue'
+import App from './App.vue'
 import router from './router'
 
 import './assets/jonghun.css'
