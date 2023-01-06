@@ -1,0 +1,86 @@
+<template>
+<body style="width:100vw; height:100vh">
+    <img style="object-fit: cover;" id="imgid00" class="photo-background" src="background.png"/>
+    <div style="position: relative;background-color: transparent; display: inline-block; align-items: center; height: 85%; display: flex; flex-direction: column; text-align: center;">
+        <div style="width: 100%; padding: 10px;">
+            <div style="float: left; background-color: transparent;">
+                <button onclick="location.href='profile-table.html' " style="background-color: transparent; border: none; margin-top: 10px;">취소</button>
+            </div>
+            <div style="background-color: transparent; display: inline;">
+                <button style="background-color: transparent; border: none; margin-top: 7px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                      </svg>
+                </button>
+            </div>
+            <div style="float: right; background-color: transparent;">
+                <button onclick="location.href='profile-table.html'" style="background-color: transparent; border: none; margin-top: 10px;">완료</button>
+            </div>
+        </div>
+        <div style="margin-top: auto; height: 180px; width: 80%;; flex-direction: column; background-color: transparent;">
+            <div style="display: flex; margin-bottom: 5px;">
+                <div style="margin: auto; display: flex;">
+                    <img id="imgid0" style="z-index: 1; margin: auto; position: relative;" class="photo1" src="profile-image-basic.png"/>
+                    <div style="z-index: 2; display: flex;">
+                        <button onclick="location.href='image-select.html';" style="margin-top: 68px; margin-left: -37px; width: 35px; height: 35px; border-radius: 50%; text-align: center; border: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 3px;" width="22" height="22" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: center; font-size: large; margin: 0;"><input style="position: relative; width: 100%; background-color: transparent; text-align: center; border: none; outline: none; border-bottom: 1px solid white;" type="text" placeholder="이름"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; margin-left: -6%; opacity: 0.3" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                      </svg>
+                </p>
+                <p style="text-align: center; margin-top: 0px;"><input style="width: 100%; background-color: transparent; text-align: center; border: none; outline: none; border-bottom: 1px solid white; font-size: small; padding: 10px;" type="text" placeholder="상태메세지를 입력해 주세요."/>
+                    <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; margin-left: -6%;margin-top: 10px; opacity: 0.3" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                      </svg>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; height: 15vh;">
+        <button onclick="location.href='image-select-backgroud.html'" style=" width: 35px; height: 35px; position: relative; margin: auto; margin-top: auto; background-color: white; border-radius: 50%; border: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 3px;" width="22" height="22" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+              </svg>
+        </button>
+    </div>
+</body>
+</template>
+
+<style>
+.photo1 {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 45%;
+}
+
+.photo-edit {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-content: center;
+}
+
+.photo-background {
+    width: 100vw;
+    height:100vh;
+    position: absolute;
+}
+
+.photo1-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+</style>
