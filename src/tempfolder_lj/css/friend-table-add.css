@@ -1,0 +1,70 @@
+.photo1 {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 45%;
+    margin: auto; 
+    margin-bottom:17px;
+}
+
+.result{
+    width: 90%; 
+    margin: auto;
+    margin-top: 20px;
+}
+
+.big_case{
+    margin-bottom: 20px; 
+    padding: 20px; 
+    height: 240px; 
+    width: 100%; 
+    flex-direction: column; 
+    background-color: #F6F6F6; 
+    border-radius: 7px;
+}
+
+.pstyle{
+    text-align: center; 
+    font-size: large; 
+    margin-bottom: 17px;
+}
+
+.adding{
+    text-align: center; margin-top: 4px; font-size: small;
+}
+
+.adding_button{
+    outline: none; 
+    padding: 6px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    border-radius: 7px; 
+    border: none; 
+    background-color: #FEE500;
+}
+
+.me_case{
+    width: 90%;
+    padding-top: 2px; 
+    height: 30px; 
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    background-color: #F6F6F6; 
+    display: flex; 
+    border-radius: 7px; 
+    text-align: center;
+}
+
+.name{
+    margin-left: 10px;
+}
+
+.Id{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.nothing{
+    margin-top: 20px;
+}

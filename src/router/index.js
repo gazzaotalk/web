@@ -20,6 +20,26 @@ const router = createRouter({
       path: '/room',
       name: 'room',
       component: () => import('../pages/RoomView.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../pages/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../pages/RegisterView.vue')
+    },
+    {
+      path: '/friends-add',
+      name: 'firends-add',
+      component: () => import('../pages/FriendsAddView.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../pages/ProfileView.vue')
     }
   ]
 })

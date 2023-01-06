@@ -269,7 +269,7 @@
 </template>
 
 <style>
-textarea:focus{
+textarea:focus {
     outline:none;
     border:none;
 }

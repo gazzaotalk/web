@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>friend-add</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/friend-table-add.css" />
+</head>
+
+<body style="width:100vw; height:100vh; display: flex; flex-direction: column;">
+    <div style="width: 100vw; position: fixed;background-color: transparent; display: inline-block; height: 40px; text-align: center;">
+        <div style="width: 100vw ; padding: 10px; padding-top: 20px;">
+            <div style="float: left; background-color: transparent; position: absolute;">
+                <button style="background-color: transparent; border: none; padding: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                </button>
+            </div>
+            <div>
+                <p style="margin-top: 7px; font-size: larger;">카카오톡 ID로 추가</p>
+            </div>
+    </div>
+    <div style="width: 100vw; height: 40px; display: flex;">
+        <input onchange="printName()" id="name" style="height: 40px; width: 90%; display: inline-block; margin: auto;border: none; border-bottom: 1px solid; outline: none;" type="search" maxlength="20" placeholder="친구 카카오톡 ID"/>
+    </div>
+    <div id="me"></div>
+    <!-- <div style="width: 90%; padding-top: 2px; height: 30px; margin: auto;margin-top: 20px;margin-bottom: 20px; background-color: #F6F6F6; display: flex; border-radius: 7px; text-align: center;">
+        <p style="margin-left: 10px">내 아이디</p>
+        <p style="margin-left: auto; margin-right: 10px;">My_ID</p>
+    </div> -->
+    <div id="friend"></div>
+    <!-- <div style="width: 90%; margin: auto;">
+        <div style="margin-bottom: 20px; padding: 20px; height: 240px; width: 100%; flex-direction: column; background-color: #F6F6F6; border-radius: 7px;">
+            <div>
+                    <img style="margin: auto; margin-bottom:17px;" class="photo1" src="profile-image-basic.jfif" alt="Profile" />
+            </div>
+            <div>
+                <p style="text-align: center; font-size: large; margin-bottom: 17px;">Kevin</p>
+                <div style="text-align: center; margin-top: 4px; font-size: small;"><button style="outline: none; padding: 6px; padding-left: 20px; padding-right: 20px; border-radius: 7px; border: none; background-color: #FEE500;">친구 추가</button></div>
+            </div>
+        </div>
+    </div> -->
+    <div id="none"></div>
+
+
+    <script>
+        var myname = ["myname"];
+        var myid = ["myid"];
+        var num = 0;
+        var stat = 0;
+        var activated=0;
+        var friend_name = ["kim","lee","park"];
+        var friend_profile = ['profile-image-basic.jfif','profile-image-basic.jfif','profile-image-basic.jfif'];
+        
+        function showresult(){
+            if(stat==1)
+            {
+                var myDiv = document.getElementById("remove");
+                var parent = myDiv.parentElement; // 부모 객체 알아내기
+                parent.removeChild(myDiv);
+            }
+            let case_f = document.getElementById('friend');
+            let new_result = document.createElement('div');
+            let new_result_0 = document.createElement('div');
+            let new_result_0_1 = document.createElement('div');
+            let new_result_0_2 = document.createElement('div');
+            let new_result_0_1_i = document.createElement('img');
+            let new_result_0_2_1 = document.createElement('p');
+            let new_result_0_2_2 = document.createElement('div');
+            let new_result_0_2_2_1 = document.createElement('button');
+
+            new_result.setAttribute('class','result');
+            new_result.setAttribute('id','child');
+            new_result_0.setAttribute('class','big_case');
+            new_result_0_1_i.setAttribute('class','photo1');
+            new_result_0_1_i.setAttribute('src',friend_profile[i]);
+            new_result_0_2_1.setAttribute('class','pstyle');
+            new_result_0_2_1.innerHTML = friend_name[i];
+            new_result_0_2_2.setAttribute('class','adding');
+            new_result_0_2_2_1.setAttribute('class','adding_button');
+            new_result_0_2_2_1.innerHTML = "친구 추가";
+
+            friend.appendChild(new_result);
+            new_result.appendChild(new_result_0);
+            new_result_0.appendChild(new_result_0_1);
+            new_result_0_1.appendChild(new_result_0_1_i);
+            new_result_0.appendChild(new_result_0_2);
+            new_result_0_2.appendChild(new_result_0_2_1);
+            new_result_0_2.appendChild(new_result_0_2_2);
+            new_result_0_2_2.appendChild(new_result_0_2_2_1);
+            num = 1
+            stat = 0;
+        }
+        function reset(){
+            if(num==1){
+                var myDiv = document.getElementById("child");
+                var parent = myDiv.parentElement; // 부모 객체 알아내기
+                parent.removeChild(myDiv);
+            }
+            num=0;
+        }
+        function printName()  {
+            
+            const name = document.getElementById('name').value;
+            for(i=0;friend_name[i]!=null;i++)
+            {
+                if((name == friend_name[i])==true)
+                {
+                    reset();
+                    showresult();   
+                    break;
+                }
+                else{
+                    reset();
+                   if(document.getElementById('name').value == ""||stat==0){ 
+                    checking();  
+                   }
+                }   
+            }
+            activated =1;
+        }
+        function prtme(){
+            let prt = document.getElementById('me');
+            let me_0 = document.createElement('div');
+            let me_0_1 = document.createElement('p');
+            let me_0_2 = document.createElement('p');
+
+            me_0.setAttribute('class','me_case');
+            me_0.setAttribute('id','remove')
+            me_0_1.setAttribute('class','name');
+            me_0_2.setAttribute('class','Id');
+            me_0_1.innerHTML = myname;
+            me_0_2.innerHTML = myid;
+
+            prt.appendChild(me_0);
+            me_0.appendChild(me_0_1);
+            me_0.appendChild(me_0_2);
+            stat=1;
+        }
+        function checking(){
+            if(document.getElementById('name').value == ""||stat==0)
+            {
+                prtme();
+            }
+        }
+        checking();
+    </script>
+    <!-- <div style="width: 90%; padding-top: 2px; height: 30px; margin: auto;margin-top: 20px;margin-bottom: 20px; background-color: #F6F6F6; display: flex; border-radius: 7px; text-align: center;">
+        <p style="margin-left: 10px">내 아이디</p>
+        <p style="margin-left: auto; margin-right: 10px;">My_ID</p>
+    </div> -->
+</body>
